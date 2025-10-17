@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Рудик Олександра — Портфоліо</title>
+    <meta name="description"
+        content="Рудик Олександра — студентка ВНТУ, факультет менеджменту. Виготовлення синіх слаймів." />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f7fbff;
+            --card: #ffffff;
+            --accent-1: #0b63d6;
+            /* глибокий синій */
+            --accent-2: #1e90ff;
+            /* світліший синій */
+            --muted: #6b7280;
+            --radius: 14px;
+            --maxw: 1000px;
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+            color-scheme: light;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            margin: 0;
+            background: linear-gradient(180deg, var(--bg), #eef6ff);
+            color: #0b1220;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.45;
+            padding: 32px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .wrap {
+            width: 100%;
+            max-width: var(--maxw);
+            background: transparent;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 28px;
+        }
+
+        .logo {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            text-decoration: none;
+            color: var(--accent-1);
+        }
+
+        .logo .mark {
+            width: 46px;
+            height: 46px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            box-shadow: 0 6px 18px rgba(11, 99, 214, 0.18);
+        }
+
+        .logo h1 {
+            font-size: 16px;
+            margin: 0;
+            line-height: 1;
+        }
+
+        .logo p {
+            margin: 0;
+            font-size: 12px;
+            color: var(--muted)
+        }
+
+        main {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 28px;
+            box-shadow: 0 10px 30px rgba(8, 25, 50, 0.06);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 340px 1fr;
+            gap: 28px;
+            align-items: start;
+        }
+
+        /* Ліва колонка - фото та коротко */
+        .profile {
+            background: linear-gradient(180deg, rgba(14, 84, 185, 0.05), rgba(30, 144, 255, 0.03));
+            border-radius: 12px;
+            padding: 18px;
+            text-align: center;
+        }
+
+        .photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            margin: 0 auto 14px;
+            overflow: hidden;
+            display: block;
+            background: #eaf4ff;
+            border: 4px solid rgba(11, 99, 214, 0.08);
+        }
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block
+        }
+
+        .name {
+            font-weight: 700;
+            font-size: 18px;
+            color: var(--accent-1);
+            margin: 6px 0 2px;
+        }
+
+        .role {
+            font-size: 13px;
+            color: var(--muted);
+            margin: 0 0 8px
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 12px;
+            padding: 6px 10px;
+            background: rgba(11, 99, 214, 0.08);
+            color: var(--accent-1);
+            border-radius: 999px;
+            margin-bottom: 12px;
+        }
+
+        /* Основний контент */
+        section.hi {
+            margin-bottom: 18px
+        }
+
+        .lead {
+            font-size: 20px;
+            margin: 8px 0 0;
+            font-weight: 600;
+            color: #05294a;
+        }
+
+        .sub {
+            color: var(--muted);
+            margin-top: 8px
+        }
+
+        h2 {
+            margin: 16px 0 10px;
+            font-size: 16px;
+            color: #07224a;
+        }
+
+        .about-text {
+            background: #fff;
+            padding: 14px;
+            border-radius: 10px;
+            box-shadow: inset 0 1px 0 rgba(11, 99, 214, 0.03);
+            color: #122238;
+            font-size: 14px;
+        }
+
+        .services {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+
+        .service {
+            flex: 1 1 220px;
+            background: linear-gradient(180deg, rgba(14, 84, 185, 0.02), transparent);
+            border-radius: 10px;
+            padding: 12px;
+            border: 1px solid rgba(11, 99, 214, 0.06);
+        }
+
+        .service h3 {
+            margin: 0 0 8px;
+            font-size: 14px;
+            color: var(--accent-1)
+        }
+
+        .service p {
+            margin: 0;
+            font-size: 13px;
+            color: var(--muted)
+        }
+
+        /* Порожнє портфоліо (інструкція) */
+        .portfolio-empty {
+            margin-top: 10px;
+            padding: 12px;
+            border-radius: 10px;
+            background: #fbfdff;
+            border: 1px dashed rgba(11, 99, 214, 0.08);
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* Контакти (без форми) */
+        .contact {
+            margin-top: 14px;
+            padding: 12px;
+            border-radius: 10px;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(90deg, rgba(11, 99, 214, 0.03), transparent);
+            border: 1px solid rgba(11, 99, 214, 0.04);
+        }
+
+        .contact .left {
+            font-size: 13px;
+            color: #0b2a4a
+        }
+
+        .contact .right {
+            font-size: 13px;
+            color: var(--muted)
+        }
+
+        footer {
+            margin-top: 18px;
+            text-align: center;
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        /* Адаптація */
+        @media (max-width:900px) {
+            .grid {
+                grid-template-columns: 1fr;
+                padding-bottom: 6px
+            }
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px
+            }
+
+            .photo {
+                width: 140px;
+                height: 140px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <a class="logo" href="#">
+                <div class="mark">Р</div>
+                <div>
+                    <h1>Рудик Олександра</h1>
+                    <p>Студентка ВНТУ — менеджмент</p>
+                </div>
+            </a>
+            <div style="text-align:right;">
+                <div style="font-size:13px;color:var(--muted)">Портфоліо — Слайми</div>
+            </div>
+        </header>
+
+        <main>
+            <div class="grid">
+                <!-- Ліва колонка -->
+                <aside class="profile">
+                    <!-- Замінити src на фактичне фото (photo.jpg) -->
+                    <a class="photo" href="#">
+                        <img src="photo.jpg" alt="Фото Рудик Олександри"
+                            onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%%22http://www.w3.org/2000/svg%%22 viewBox=%%220 0 200 200%%22><rect fill=%%22%23eaf4ff%%22 width=%%22100%%%%22 height=%%22100%%%%22/><text x=%%2250%%%%22 y=%%255%%%%22 font-size=20 text-anchor=middle fill=%%22%230b63d6%%22 font-family=Inter,Arial>Додайте фото</text></svg>';">
+                    </a>
+
+                    <div class="name">Рудик Олександра Сергіївна</div>
+                    <div class="role">Студентка ВНТУ, факультет менеджменту</div>
+                    <div class="tag">Виготовлення синіх слаймів</div>
+
+                    <div style="margin-top:12px;text-align:left;font-size:13px;color:var(--muted)">
+                        <strong>Місія</strong>
+                        <div style="margin-top:6px">Створюю безпечні, яскраві та приємні на дотик сині слайми для дітей
+                            та дорослих.</div>
+                    </div>
+                </aside>
+
+                <!-- Права колонка -->
+                <section>
+                    <div class="hi">
+                        <div class="lead">Привіт! Я — Олександра. 👋</div>
+                        <div class="sub">Займаюся підприємництвом і спеціалізуюся на створенні синіх слаймів. Поєдную
+                            творчість і базові навички менеджменту.</div>
+                    </div>
+
+                    <h2>Про мене</h2>
+                    <div class="about-text">
+                        Навчаюся в Вінницькому національному технічному університеті на факультеті менеджменту.
+                        Захоплююся створенням якісних та безпечних слаймів, уважна до деталей та клієнта. Маю практичні
+                        вміння у виготовленні різних текстур і відтінків синього.
+                    </div>
+
+                    <h2>Послуги</h2>
+                    <div class="services">
+                        <div class="service">
+                            <h3>Виготовлення слайму на замовлення</h3>
+                            <p>Індивідуальні замовлення синіх слаймів — різні текстури і доповнення (перли, блискітки,
+                                аромати). Працюю з безпечними матеріалами.</p>
+                        </div>
+
+                        <div class="service">
+                            <h3>Малі партії для заходів</h3>
+                            <p>Підготовка пакетів слаймів для дитячих заходів, подарункових наборів та ярмарків.</p>
+                        </div>
+                    </div>
+
+                    <h2>Портфоліо</h2>
+                    <div class="portfolio-empty">
+                        Наразі прикладів проєктів у цьому розділі немає. Коли з'являться фото готових робіт — їх можна
+                        легко додати сюди у вигляді сітки з картинок і коротких описів.
+                    </div>
+
+                    <h2>Контакти</h2>
+                    <div class="contact" role="contentinfo">
+                        <div class="left">
+                            <!-- Якщо хочеш — заміни на реальні дані -->
+                            Email: <a href="mailto:sashkarud@gmail.com"
+                                style="color:var(--accent-1);text-decoration:none">sashkarud@gmail.com</a><br>
+                        </div>
+                        <div class="right">
+                            Студентка ВНТУ — факультет менеджменту<br>
+                            Послуга: виготовлення слайму
+                        </div>
+                    </div>
+
+                    <footer>
+                        © <span id="year"></span> Рудик Олександра — ВНТУ. Усі права захищені.
+                    </footer>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // автоматичне оновлення року
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
