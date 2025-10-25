@@ -9,6 +9,35 @@
         rel="stylesheet">
     <style>
         body {
+            background: linear-gradient(-45deg, #cdf1ff, #338aff, #3482fc, #27b7fd);
+            background-size: 350% 350%;
+            animation: shine-bg 17s ease infinite;
+        }
+
+        .avatar {
+            border: 8px solid #53aaff55;
+            border-radius: 50%;
+            box-shadow: 0 0 30px #44c3ff80, 0 3px 16px #0002;
+            width: 180px;
+            height: 180px;
+            overflow: hidden;
+            margin: 0 auto 16px auto;
+            background: #eef6ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .avatar img {
+            width: auto;
+            height: 98%;
+            /* або 100% — як краще */
+            object-fit: contain;
+            background: #eef6ff;
+            padding: 8px;
+        }
+
+        body {
             margin: 0;
             min-height: 100vh;
             font-family: 'Inter', Arial, sans-serif;
@@ -303,31 +332,6 @@
 </head>
 
 <body>
-    background: linear-gradient(-45deg,#cdf1ff,#338aff,#3482fc,#27b7fd);
-    background-size: 350% 350%;
-    animation: shine-bg 17s ease infinite;
-    }
-    .avatar {
-    border: 8px solid #53aaff55;
-    border-radius: 50%;
-    box-shadow: 0 0 30px #44c3ff80, 0 3px 16px #0002;
-    width: 180px;
-    height: 180px;
-    overflow: hidden;
-    margin: 0 auto 16px auto;
-    background: #eef6ff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    }
-    .avatar img {
-    width: auto;
-    height: 98%; /* або 100% — як краще */
-    object-fit: contain;
-    background: #eef6ff;
-    padding: 8px;
-    }
-
     <!-- Блискітки на фоні -->
     <span class="sparkle" style="left:6vw;animation-delay:0s;"><img
             src="https://cdn-icons-png.flaticon.com/512/3504/3504217.png" width="100%" /></span>
