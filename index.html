@@ -367,6 +367,63 @@
             margin: 28px 0 4px 0;
         }
 
+        .scattered-cat {
+            position: fixed;
+            z-index: 99;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 23px;
+            box-shadow: 0 2px 18px #3a88ec66;
+            transition: transform 0.19s;
+            pointer-events: none;
+            /* Котики не заважатимуть клікам */
+            opacity: 0.93;
+        }
+
+        .scattered-cat:hover {
+            transform: scale(1.09) rotate(-7deg);
+            opacity: 1;
+        }
+
+        /* Індивідуальні позиції, обертання, розміри для кожного котика */
+        .cat1 {
+            top: 7vh;
+            left: 8vw;
+            transform: rotate(-8deg) scale(1);
+        }
+
+        .cat2 {
+            top: 15vh;
+            left: 67vw;
+            transform: rotate(15deg) scale(0.98);
+        }
+
+        .cat3 {
+            top: 48vh;
+            left: 15vw;
+            transform: rotate(5deg) scale(1.07);
+        }
+
+        .cat4 {
+            top: 65vh;
+            left: 60vw;
+            transform: rotate(-14deg) scale(0.89);
+        }
+
+        .cat5 {
+            top: 68vh;
+            left: 32vw;
+            transform: rotate(13deg) scale(1.12);
+        }
+
+        .cat6 {
+            top: 32vh;
+            left: 49vw;
+            transform: rotate(-8deg) scale(0.94);
+        }
+
+
         @media (max-width:600px) {
 
             .card,
@@ -438,6 +495,14 @@
         </form>
     </div>
     <footer>© 2025 Олександра Рудик. Handmade слайми для щастя!</footer>
+    <!-- Розкидані котики -->
+    <img class="scattered-cat cat1" src="https://cdn2.thecatapi.com/images/MTY3ODIyMQ.jpg" alt="Котик 1">
+    <img class="scattered-cat cat2" src="https://cdn2.thecatapi.com/images/5uh.jpg" alt="Котик 2">
+    <img class="scattered-cat cat3" src="https://cdn2.thecatapi.com/images/bpc.jpg" alt="Котик 3">
+    <img class="scattered-cat cat4" src="https://cdn2.thecatapi.com/images/6qi.jpg" alt="Котик 4">
+    <img class="scattered-cat cat5" src="https://cdn2.thecatapi.com/images/MTc4Njg3OQ.jpg" alt="Котик 5">
+    <img class="scattered-cat cat6" src="https://cdn2.thecatapi.com/images/bpc.jpg" alt="Котик 6">
+
 </body>
 
 </html>
